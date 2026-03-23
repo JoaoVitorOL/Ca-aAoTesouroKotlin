@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                         clickAnterior = {navigationController.navigate("/tela02") },
                         clickProximo = {
                             navigationController.navigate("/tela01")
-                            navigationController.popBackStack()
+                            navigationController.popBackStack()  // Não está correto ainda o padrão
                         }
                     )
                 }
