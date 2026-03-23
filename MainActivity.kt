@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 composable("/tela01"){
                     Tela(
                         "Tela 01",
-                        clickAnterior = { },
+                        clickAnterior = {navigationController.navigate("/tela03") },
                         clickProximo = {
                             navigationController.navigate("/tela02")
                         }
@@ -43,14 +43,14 @@ class MainActivity : ComponentActivity() {
                 composable("/tela02"){
                     Tela(
                         "Tela 02",
-                        clickAnterior = { },
+                        clickAnterior = { navigationController.navigate("/tela01")},
                         clickProximo = {  navigationController.navigate("/tela03") }
                     )
                 }
                 composable("/tela03"){
                     Tela(
                         "Tela 03",
-                        clickAnterior = { },
+                        clickAnterior = {navigationController.navigate("/tela02") },
                         clickProximo = {
                             navigationController.navigate("/tela01")
                             navigationController.popBackStack()
